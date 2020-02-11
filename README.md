@@ -15,6 +15,9 @@ Keywords–Computer vision; face detection; face recognition; feature extraction
 - Install all the requirements in the **requirements.txt**.
 - To run the kivy app **python main.py**
 
+### Problem on Starting??
+Remove anything that causes problem. :heart:
+
 ## Screenshots
 
 ### Home
