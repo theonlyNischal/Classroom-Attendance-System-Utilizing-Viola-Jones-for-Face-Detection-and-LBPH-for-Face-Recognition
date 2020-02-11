@@ -1,0 +1,266 @@
+#: import MDTextField kivymd.uix.textfield.MDTextField
+#: import MDTextFieldRound kivymd.uix.textfield.MDTextFieldRound
+
+#: import MDRectangleFlatButton kivymd.uix.button.MDRectangleFlatButton
+
+
+
+<MyMDLabel@MDLabel>
+    size_hint_y: None
+    height: self.texture_size[1]
+
+
+<RootWidget>
+    NavigationLayout:
+
+        ScreenManager:
+            id: screen_manager
+
+            Screen:
+                name: "HomeScreen"
+                BoxLayout:
+                    orientation: 'vertical'
+                    # size_hint: .8, .8
+
+                    # orientation: 'vertical'
+                    MDToolbar:
+                        title: "Attendance Management System"
+                        md_bg_color: app.theme_cls.primary_color
+                        elevation: 10
+                        left_action_items:[["school", lambda x: x]] # 
+
+                    Widget:
+
+                
+                MDFloatingActionButton:
+                    icon: "assets/icons/add.png"
+                    elevation_normal: 0
+                    opposite_color: True
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {"center_x": .2, "center_y": .6}
+                    size: 200, 200
+                    size_hint: None, None
+                    on_press: 
+                    on_release: screen_manager.current = "EnrolStudentScreen"
+                    md_bg_color: 1, 1, 0, 0
+
+                
+                MDFloatingActionButton:
+                    icon: "assets/icons/attendance.png"
+                    elevation_normal: 0
+                    opposite_color: True
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    size: 200, 200
+                    size_hint: None, None
+
+                    on_release: app.performAttendance()
+                    md_bg_color: 1, 1, 0, 0
+                
+                # MyMDLabel:
+                #     font_style: 'H4'
+                #     theme_text_color: 'Primary'
+                #     text: "Add Student"
+                #     pos_hint: {"center_x": .6, "center_y": .4}
+
+                MDFloatingActionButton:
+                    icon: "assets/icons/view.png"
+                    elevation_normal: 0
+                    opposite_color: True
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {"center_x": .8, "center_y": .6}
+                    size: 200, 200
+                    size_hint: None, None
+
+                    on_release: screen_manager.current = "ViewAttendanceScreen"
+                    md_bg_color: 1, 1, 0, 0
+                
+                # MyMDLabel:
+                #     font_style: 'H4'
+                #     theme_text_color: 'Primary'
+                #     text: "View Attendance"
+                #     pos_hint: {"center_x": .9, "center_y": .4}
+                
+                MDFloatingActionButton:
+                    icon: "assets/icons/exit.png"
+                    elevation_normal: 0
+                    opposite_color: True
+                    md_bg_color: app.theme_cls.primary_color
+                    pos_hint: {"center_x": .2, "center_y": .2}
+                    size: 200, 200
+                    size_hint: None, None
+                    md_bg_color: 1, 1, 0, 0
+
+                    on_release: app.show_ExitDialog()
+
+
+
+
+
+
+
+            Screen:
+                name: "ViewAttendanceScreen"
+                BoxLayout:
+                    orientation: 'vertical'
+                    # size_hint: .8, .8
+
+                    # orientation: 'vertical'
+                    MDToolbar:
+                        title: "Attendance Management System"
+                        md_bg_color: app.theme_cls.primary_color
+                        elevation: 10
+                        left_action_items:[["arrow-left", lambda x: app.back_to_home_screen()]]
+                    Widget:
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        spacing: dp(20)
+                        padding: "100dp"
+                        MyMDLabel:
+                            font_style: 'H4'
+                            theme_text_color: 'Primary'
+                            text: "Classroom Attendance System"
+                            halign: 'center'
+
+                        MyMDLabel:
+                            font_style: 'H5'
+                            theme_text_color: 'Primary'
+                            text: "View Attendance"
+                            halign: 'center'
+                        
+
+
+            Screen:
+                name: "EnrolStudentScreen"
+                BoxLayout:
+                    orientation: 'vertical'
+                    # size_hint: .8, .8
+
+                    # orientation: 'vertical'
+                    MDToolbar:
+                        title: "Attendance Management System"
+                        md_bg_color: app.theme_cls.primary_color
+                        elevation: 10
+                        left_action_items:[["arrow-left", lambda x: app.back_to_home_screen()]]
+
+                    Widget:
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        spacing: dp(20)
+                        padding: "150dp"
+                        MyMDLabel:
+                            font_style: 'H4'
+                            theme_text_color: 'Primary'
+                            text: "Classroom Attendance System"
+                            halign: 'center'
+
+                        MyMDLabel:
+                            font_style: 'H5'
+                            theme_text_color: 'Primary'
+                            text: "Student Enrollment"
+                            halign: 'center'
+
+                        
+                        MDTextField:
+                            id: student_name
+                            hint_text: "Name"
+                            helper_text: "Enter Full Name"
+                            helper_text_mode: "on_focus"
+                            max_text_length: 23
+                            foreground_color: 1, 1, 1, 1 # r,g,b,a
+                            mode: "rectangle"
+                            required: True
+
+                        MDTextField:
+                            id: student_id
+                            hint_text: "ID"
+                            helper_text: "Enter ID"
+                            helper_text_mode: "on_focus"
+                            max_text_length: 6
+                            foreground_color: 1, 1, 1, 1 # r,g,b,a
+                            mode: "rectangle"
+                            required: True
+
+                        MDRectangleFlatIconButton:
+                            id: take_training_image_button
+                            # disabled: True
+                            text: "Take Training Images"
+                            icon: "camera"
+                            width: dp(230)
+                            pos_hint: {'center_x': .5}
+                            on_release: app.captureTrainingImages(student_name.text, student_id.text, screen_manager)
+
+
+
+
+                        
+
+            
+
+                        
+                    
+
+# <RootWidget>:
+
+ 
+
+#     size_hint: .8, .8
+#     pos_hint: {"center_x": .5, "center_y": .5}
+#     spacing: dp(20)
+#     orientation: 'vertical'
+    
+    
+
+#     MyMDLabel:
+#         font_style: 'H4'
+#         theme_text_color: 'Primary'
+#         text: "Classroom Attendance System"
+#         halign: 'center'
+
+#     MyMDLabel:
+#         font_style: 'H5'
+#         theme_text_color: 'Primary'
+#         text: "Student Enrollment"
+#         halign: 'center'
+
+    
+#     MDTextField:
+#         id: student_name
+#         hint_text: "Name"
+#         helper_text: "Enter Full Name"
+#         helper_text_mode: "on_focus"
+#         max_text_length: 23
+#         foreground_color: 1, 1, 1, 1 # r,g,b,a
+#         mode: "rectangle"
+#         required: True
+
+#     MDTextField:
+#         id: student_id
+#         hint_text: "ID"
+#         helper_text: "Enter ID"
+#         helper_text_mode: "on_focus"
+#         max_text_length: 6
+#         foreground_color: 1, 1, 1, 1 # r,g,b,a
+#         mode: "rectangle"
+#         required: True
+
+#     MDRectangleFlatIconButton:
+#         text: "Take Training Images"
+#         icon: "camera"
+#         width: dp(230)
+#         pos_hint: {'center_x': .5}
+#         on_release: root.captureTrainingImages(student_name.text, student_id.text)
+#         on_release: root.show_popup()
+
+
+
+    
+#     MDRectangleFlatButton:
+#         text: "Submit"
+        
+
+
