@@ -21,9 +21,12 @@ Keywords–Computer vision; face detection; face recognition; feature extraction
 ![Home](assets/README/home.png)
 
 ### Add new Student
+![Add](assets/README/add_new.png)
+
+### Training
+![Home](assets/README/training.png)
 
 ## Built With
-
 * OpenCV
 * Kivy
 
