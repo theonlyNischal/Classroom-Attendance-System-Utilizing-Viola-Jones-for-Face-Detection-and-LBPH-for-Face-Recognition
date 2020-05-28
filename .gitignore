@@ -1,4 +1,4 @@
-trainer/
+*.xml
 Accuracy/Datasets/
 Accuracy/trainer/
-faces/
+students/
