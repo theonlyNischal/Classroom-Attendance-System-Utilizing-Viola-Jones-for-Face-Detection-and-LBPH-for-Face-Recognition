@@ -1,5 +1,11 @@
 # A Real-time Classroom Attendance System Utilizing Viola–Jones for Face Detection and LBPH for Face Recognition
 
+## Team Members
+
+* [Ashish Tiwari](github.com/megamind98/)
+* [Saroj Bhattarai](github.com/sarojbhattarai/)
+* [Nischal Lal Shrestha](github.com/theonlynischal)
+
 ## Abstract
 The face of a human is crucial for conveying identity. Computer scientists, Neuro scientists, and psychologists, all exploits this human feature using image processing
 techniques for commercial, and law enforcement applications. Likewise, this feature can be invited into classrooms to maintain records of students’ attendance. Con-
