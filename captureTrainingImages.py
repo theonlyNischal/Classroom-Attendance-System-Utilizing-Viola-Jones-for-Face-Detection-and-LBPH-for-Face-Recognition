@@ -7,10 +7,9 @@ from os.path import isfile, join
 from helper.preprocess import preprocess_image, face_detector
 
 
-# Initialize the webcam
+# Initializes the webcam
 video_capture = cv.VideoCapture(0)
-# student_full_name = input("Enter Full Name: ")
-# student_ID = input("Enter Student ID: ")
+
 
 student_full_name = sys.argv[1]
 student_ID = sys.argv[2]
@@ -21,6 +20,8 @@ while True:
         _, img = video_capture.read()
         gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)            
             # Resize face to 200x200
+
+        # See helper.preprocess for viola-jones algorithm
         face, coord = face_detector(gray_img)
         x,y,w,h = coord
 
