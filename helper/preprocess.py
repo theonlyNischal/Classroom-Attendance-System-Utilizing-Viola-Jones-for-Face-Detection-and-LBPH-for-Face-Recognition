@@ -3,6 +3,8 @@ import numpy as np
 from os import listdir
 from os.path import isfile, join
 
+
+
 # Load HAAR face classifier
 face_cascade_path = "assets/face_detection/haarcascade_frontalface_default.xml"
 left_eye_cascade_path = "assets/face_detection/haarcascade_left_eye.xml"
@@ -12,6 +14,14 @@ left_eye_cascade = cv.CascadeClassifier(left_eye_cascade_path)
 right_eye_cascade = cv.CascadeClassifier(right_eye_cascade_path)
 
 def face_detector(gray_img):
+    """
+    Argument: Image in Grayscale Format
+    Return: Region of interes(i.e Face) and coordinates
+
+    Uses pretrained cascade path to detect faces.
+
+    """
+
     faces = face_cascade.detectMultiScale(gray_img, 1.3, 5)
 
     if faces is ():
