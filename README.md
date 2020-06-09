@@ -2,8 +2,8 @@
 
 ## Team Members
 
-* [Ashish Tiwari](github.com/megamind98/)
-* [Saroj Bhattarai](github.com/sarojbhattarai/)
+* [Ashish Tiwari](https://github.com/megamind98/)
+* [Saroj Bhattarai](https://github.com/sarojbhattarai)
 * [Nischal Lal Shrestha](github.com/theonlynischal)
 
 ## Abstract
