@@ -6,6 +6,8 @@
 * [Saroj Bhattarai](https://github.com/sarojbhattarai)
 * [Nischal Lal Shrestha](github.com/theonlynischal)
 
+#### To Do: Record students in a database after recognizing them(Database)
+
 ## Abstract
 The face of a human is crucial for conveying identity. Computer scientists, Neuro scientists, and psychologists, all exploits this human feature using image processing
 techniques for commercial, and law enforcement applications. Likewise, this feature can be invited into classrooms to maintain records of students’ attendance. Con-
