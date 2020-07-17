@@ -4,7 +4,7 @@
 
 * [Ashish Tiwari](https://github.com/megamind98/)
 * [Saroj Bhattarai](https://github.com/sarojbhattarai)
-* [Nischal Lal Shrestha](github.com/theonlynischal)
+* [Nischal Lal Shrestha](https://nischal.info.np)
 
 #### To Do: Record students in a database after recognizing them(Database)
 
