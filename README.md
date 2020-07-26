@@ -31,7 +31,7 @@ class time.
 - Run the Kivy app: **python main.py**
 
 ### Problem on Starting??
-Remove anything that causes problem. :heart:
+Remove anything that causes problem. :heart: Please raise an issue if any problem in detecting/recognizing students. Database parts are coming soon.
 
 # Functionalities
 
