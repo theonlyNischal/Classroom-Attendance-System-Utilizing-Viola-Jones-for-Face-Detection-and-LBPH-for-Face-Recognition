@@ -7,7 +7,7 @@
 * [Nischal Lal Shrestha](https://nischal.info.np)
 
 #### To Do: Record students in a database after recognizing them(Database)
-- We shall use sqlite database here(more details to follow)
+- We shall use sqlite database here(more details to follow)https://docs.python.org/3/library/sqlite3.html
 
 ## Abstract
 The face of a human is crucial for conveying identity. Computer scientists, Neuro scientists, and psychologists, all exploits this human feature using image processing
