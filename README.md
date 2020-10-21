@@ -14,9 +14,9 @@ The face of a human is crucial for conveying identity. Computer scientists, Neur
 techniques for commercial, and law enforcement applications. Likewise, this feature can be invited into classrooms to maintain records of students’ attendance. Con-
 temporary traditional way of recording attendance involves human intervention and requires cooperation of the students which is hectic and contribute towards waste of
 class time. An automated real-time classroom attendance system detects students from still image or video frame coming from a digital camera, and marks his/her
-attendance by recognizing them. The system utilizes Viola–Jones object detection framework which is capable of processing images extremelyKeywords–Computer rapidly with high detec-
-tion rates. In the next stage, the detected face in the image is recognized using Local Binary Patterns Histograms.
- vision; face detection; face recognition; feature extraction; image processing; Local Binary Patterns Histogram; object detection; Viola-Jones object detection.
+attendance by recognizing them. The system utilizes Viola–Jones object detection framework which is capable of processing images extremely rapidly with high detec-
+tion rates. In the next stage, the detected face in the image is recognized using Local Binary Patterns Histogram.
+Keywords–Computer vision; face detection; face recognition; feature extraction; image processing; Local Binary Patterns Histogram; object detection; Viola-Jones object detection.
 
 ## Problem Statement
 The main problem with the traditional attendance system is that it is subject to manipulation and thre remains chance of human error during data entry.
