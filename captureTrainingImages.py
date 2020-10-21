@@ -1,4 +1,4 @@
-# Import the libraries
+# Importing the required libraries
 import json, sys
 import cv2 as cv
 import numpy as np
@@ -7,7 +7,7 @@ from os.path import isfile, join
 from helper.preprocess import preprocess_image, face_detector
 
 
-# Initializes the webcam
+# Initializes the webcam to capture lie video
 video_capture = cv.VideoCapture(0)
 
 

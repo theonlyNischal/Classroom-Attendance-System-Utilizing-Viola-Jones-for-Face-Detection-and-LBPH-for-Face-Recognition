@@ -1,6 +1,6 @@
 
 
-# Import the libraries
+# Importing the required libraries
 import cv2 as cv
 import numpy as np
 import json
@@ -18,7 +18,7 @@ model.read("trainer/model.xml")
 
 
 
-# Initializing the webcam
+# Initializing the webcam to capture live video
 video_capture = cv.VideoCapture(0)
 
 while True:
