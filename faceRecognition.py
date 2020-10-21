@@ -11,14 +11,14 @@ with open('labels_to_name.json') as json_file:
     labels_to_name = json.load(json_file)
 
 
-# Load the model
+# Load the model from our assets
 model = cv.face.LBPHFaceRecognizer_create()
 model.read("trainer/model.xml")
 
 
 
 
-# Initialize the webcam
+# Initializing the webcam
 video_capture = cv.VideoCapture(0)
 
 while True:
@@ -62,3 +62,4 @@ while True:
 
 video_capture.release()
 cv.destroyAllWindows()
+# Our face recognition is finally working

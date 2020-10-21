@@ -59,6 +59,7 @@ is greater than certain threshold then attendance is done.
 ![Home](assets/README/training.png)
 
 ## Built With
+* Python
 * OpenCV
 * Kivy
 
