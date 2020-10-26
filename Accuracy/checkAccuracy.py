@@ -59,6 +59,7 @@ for img_file in glob.glob("./Datasets/Testing/*.jpg"):
 original_total = total
 total = total - face_not_found
 
+## calculates and print accuracy
 accuracy = (correct/total)*100
 
 print("--------------------------------------")
