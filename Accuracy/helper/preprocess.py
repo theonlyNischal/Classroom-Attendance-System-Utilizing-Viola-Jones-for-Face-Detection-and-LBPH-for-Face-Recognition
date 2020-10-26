@@ -1,3 +1,4 @@
+## Import necessary packages
 import cv2 as cv
 import numpy as np
 from os import listdir
@@ -11,6 +12,7 @@ face_cascade = cv.CascadeClassifier(face_cascade_path)
 left_eye_cascade = cv.CascadeClassifier(left_eye_cascade_path)
 right_eye_cascade = cv.CascadeClassifier(right_eye_cascade_path)
 
+# defines code for face detector
 def face_detector(gray_img):
     faces = face_cascade.detectMultiScale(gray_img, 1.3, 5)
 
@@ -26,7 +28,7 @@ def face_detector(gray_img):
     return roi, coord
 
 
-
+## divides image into half and apply bilateral filter
 def preprocess_image(gray_img):
     height, width = gray_img.shape[:2]
 
