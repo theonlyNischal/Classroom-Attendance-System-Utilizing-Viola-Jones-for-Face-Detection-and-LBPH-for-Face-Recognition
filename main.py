@@ -1,3 +1,4 @@
+## Import necessary packages
 import os
 from kivymd.app import MDApp
 from kivymd.theming import ThemeManager
@@ -24,7 +25,7 @@ class NavigationItem(OneLineAvatarListItem):
 class RootWidget(BoxLayout):
     pass
 
-
+## This is the main app.
 
 class MainApp(MDApp):
 
