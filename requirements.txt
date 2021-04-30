@@ -8,4 +8,4 @@ opencv-contrib-python==4.1.2.30
 Pillow==7.0.0
 Pygments==2.5.2
 requests==2.22.0
-urllib3==1.25.7
+urllib3==1.25.8
