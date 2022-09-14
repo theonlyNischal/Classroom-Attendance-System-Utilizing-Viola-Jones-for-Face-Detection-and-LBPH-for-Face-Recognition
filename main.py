@@ -1,4 +1,5 @@
-## Import necessary packages
+# Import necessary packages
+
 import os
 from kivymd.app import MDApp
 from kivymd.theming import ThemeManager
@@ -20,15 +21,14 @@ class NavigationItem(OneLineAvatarListItem):
     icon = StringProperty()
 
 
-
-
 class RootWidget(BoxLayout):
     pass
 
 ## This is the main app.
 
 class MainApp(MDApp):
-
+    """Main class for the kivy app.
+    """
     def __init__(self, **kwargs):
         self.title = "Attendance Management System"
         self.theme_cls = ThemeManager()
@@ -70,14 +70,17 @@ class MainApp(MDApp):
         os.system("python faceRecognition.py")
     
     def captureTrainingImages(self, student_name, student_id, screen_manager):
-        
-        print(len(student_name), len(student_id))
         if len(student_name) > 0 and len(student_name) <= 23 and len(student_id) > 0 and len(student_id) <= 6:
             os.system("python captureTrainingImages.py {} {}".format(student_name, student_id))
             toast("Training Images Collected.")
             screen_manager.current = "HomeScreen"
         else:
             toast("Please Enter Correct Details.")
+     
+    def recordAttendance(self):
+        """Calls a recordAttendance.py to record the attendacne.
+        """
+        os.system("python recordAttendance.py")
     
 
     
